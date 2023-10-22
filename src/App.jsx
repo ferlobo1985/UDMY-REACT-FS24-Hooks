@@ -1,17 +1,22 @@
 import { useState, useEffect } from 'react'
+import BlockComponent from './block';
 
 const App = () => {
   let [count,setCount] = useState(0);
   let [animal,setAnimal] = useState('Dog');
+  let [block,setBlock] = useState(false)
 
   const addOne  = () => setCount(count+1);
   const restOne = () => setCount(count-1)
   const setCero = () => setCount(0)
 
 
+  
   useEffect(()=>{
-    console.log('run once')
-  },[])
+    return ()=>{
+      console.log('Use effect count')
+    }
+  },[count])
 
 
   // useEffect(()=>{
@@ -33,6 +38,12 @@ const App = () => {
       <hr/>
       <h3>{animal}</h3>
       <button onClick={()=>setAnimal('Cat')}>Change animal</button>
+      <hr/>
+      { block ? 
+        <BlockComponent/>
+        :null
+      }
+      <button onClick={()=>setBlock(!block)}>Block</button>
     </>
   )
 }
