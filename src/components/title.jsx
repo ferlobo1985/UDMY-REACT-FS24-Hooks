@@ -1,7 +1,7 @@
+import {memo} from 'react'
+
 const Title = () => {
-
     console.log('1-Title')
-
     return(
         <>
             <h1>My app</h1>
@@ -10,4 +10,4 @@ const Title = () => {
     )
 }
 
-export default Title;
+export default memo(Title);

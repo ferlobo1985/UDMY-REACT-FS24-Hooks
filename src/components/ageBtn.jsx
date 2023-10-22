@@ -1,3 +1,5 @@
+import {memo} from 'react'
+
 const AgeBtn = ({handleAge}) => {
 
     console.log('5-Age BTN')
@@ -11,4 +13,4 @@ const AgeBtn = ({handleAge}) => {
     )
 }
 
-export default AgeBtn;
+export default memo(AgeBtn);

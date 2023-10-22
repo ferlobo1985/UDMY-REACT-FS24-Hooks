@@ -1,3 +1,5 @@
+import {memo} from 'react'
+
 const Count = ({count}) => {
 
     console.log('2-Count')
@@ -9,4 +11,4 @@ const Count = ({count}) => {
     )
 }
 
-export default Count;
+export default memo(Count);
