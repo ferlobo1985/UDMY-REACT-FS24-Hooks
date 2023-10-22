@@ -1,8 +1,8 @@
 import UserItem from './user_item';
 
-const User = (props) =>{
+const User = () =>{
     return(
-        <UserItem {...props}/>
+        <UserItem />
     )
 }
 
